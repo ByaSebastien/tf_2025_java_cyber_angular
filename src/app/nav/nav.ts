@@ -17,6 +17,7 @@ export class Nav {
     { title: 'Bindings' , url: '/demo1'},
     { title: 'Pipes' , url: '/demo2'},
     { title: 'Directives' , url: '/demo3'},
+    { title: 'Input/Output' , url: '/demo4'},
     { title: 'Timer' , url: '/exo1'},
     { title: 'Courses' , url: '/exo2'},
   ];

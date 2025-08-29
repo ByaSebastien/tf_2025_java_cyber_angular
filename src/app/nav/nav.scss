@@ -12,6 +12,14 @@
   }
 
   a:hover {
-    transform: scale(1.10);
+    transform: scale(1.3);
+  }
+
+  a:active {
+    background-color: purple;
+  }
+
+  .active-link {
+    background-color: red;
   }
 }

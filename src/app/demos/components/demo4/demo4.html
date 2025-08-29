@@ -1,0 +1,13 @@
+<h3>Demo 4 - Input / Output</h3>
+<ul>
+@for (p of products; track p) {
+  <li>
+    <p>{{ p }}</p>
+    <button (click)="selectProductToDelete(p)">❌</button>
+  </li>
+}
+</ul>
+<p>{{testTw}}</p>
+@if(productToDelete) {
+  <app-demo4-enfant (confirm)="deleteProduct($event)" [product]="productToDelete" [(tw)]="testTw"></app-demo4-enfant>
+}
