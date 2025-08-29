@@ -1,0 +1,49 @@
+<h3>Demo 1 - Bindings</h3>
+<p>C'est ce qui sert à relier des propriétés/méthodes du fichier ts d'un composant au fichier html de ce même composant
+</p>
+
+<div>
+    <h4>Property Binding</h4>
+    <h5>One-Way</h5>
+    <p>Pour afficher le contenu d'une propriété présente dans le ts</p>
+    <p>Votre prénom : {{ firstname }} </p>
+
+    <h5>Two-Way</h5>
+    <p>Pour modifier le contenu d'une propriété</p>
+    <p>Votre nom : {{ lastname }}</p>
+    <input type="text" [(ngModel)]="lastname">
+</div>
+
+<div>
+    <h4>Attribute Binding</h4>
+    <p>Permet de relier un attribut de balise html à du ts (propriété, condition, méthode)</p>
+    <img width="150px" [src]="avatar" alt="meme de chat">
+
+    <div class="flex-row">
+
+    <!-- Sera désactivé si dogName n'est pas rempli (hors il y a Taylor dedans) -->
+    <button class="btn" [disabled]="!dogName">Caresser le chien</button>
+    <!-- Sera désactivé si catName n'est pas rempli (il ne l'est pas, il y a null dedans) -->
+    <button class="btn" [disabled]="!catName">Caresser le chat</button>
+     </div>
+</div>
+
+<div>
+    <h4>Event Binding</h4>
+    <p>Permet de lier un évènement à une méthode</p>
+
+    <div class="flex-row">
+
+        <button class="btn" (click)="sayHello()">Dire bonjour</button>
+
+        <button class="btn" (click)="sayHello('en')">Dire bonjour en Anglais</button>
+
+        <button class="btn" (click)="sayHello('kl')">Dire bonjour en Klingon</button>
+
+        <button class="btn" [disabled]="!helloMsg" (click)="resetHello()">Ne rien dire</button>
+    </div>
+
+    <p>{{ helloMsg }}</p>
+</div>
+
+<hr>

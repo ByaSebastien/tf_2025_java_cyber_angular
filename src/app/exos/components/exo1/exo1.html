@@ -1,0 +1,14 @@
+<h3>Exercice 1 - Le Timer</h3>
+
+<p> {{ seconds | timer : format }}</p>
+
+<div class="flex-row">
+    <button class="btn" (click)="start()" [disabled]="timer">Start</button>
+    <button class="btn" (click)="pause()" [disabled]="!timer">Pause</button>
+    <button class="btn" (click)="reset()" [disabled]="seconds === 0">Reset</button>
+
+    <button class="btn" (click)="changeFormat()">
+        {{ (format === 'short' ? 'Format Long' : 'Format Court') }}
+    </button>
+</div>
+<hr>

@@ -1,0 +1,87 @@
+<h3>Demo 3 - Les directives</h3>
+
+<div>
+    <h4>Component directives</h4>
+
+    <h5>ngModel → Celle qui permet le binding two-way</h5>
+    <p>Aujourd'hui, on mange {{ repasDuJour }}</p>
+    <input type="text" [(ngModel)]="repasDuJour">
+
+    <h5>ngStyle → Pour appliquer du styline inline</h5>
+    <p [ngStyle]="{ color : textColor }">À éviter autant que possible</p>
+    
+    <h5>ngClass → Pour appliquer une classe en fonction d'une expression </h5>
+    <p [ngClass]="{ low: temperature < 12, high : temperature > 22 }"> {{ temperature }} °C</p>
+</div>
+
+<div>
+    <h4>Structural directives</h4>
+
+    <h5>L'affichage conditionnel :</h5>
+    <h6>Avant : ngIf</h6>
+
+    <p *ngIf="![0,6].includes(today.getDay()); else weekend">C'est la semaine : on bosse</p>
+    <!-- Le else étant un peu chiant à mettre en place, beaucoup de dev, faisaient juste la condition inverse -->
+    <!-- <p *ngIf="[0,6].includes(today.getDay()) " >C'est le weekend : repos </p> -->
+     <ng-template #weekend>
+        <p>C'est le weekend : repos </p>
+    </ng-template>
+
+    <h6>Avec le nouveau &commat;if </h6>
+    @if(![0,6].includes(today.getDay())){
+        <p>C'est la semaine</p>
+    }
+    @else {
+        <p>C'est le weekend</p>
+    }
+
+    <h5>Affichage d'une boucle</h5>
+    <h6>Avec ngFor</h6>
+    <p>Liste des formateurs :</p>
+
+    <p *ngFor="let trainer of trainers"> {{ trainer }} </p>
+    <p *ngIf="trainers.length === 0">Il n'y a pas encore de formateur dans la liste</p>
+
+    <h6>Avec le &commat;for</h6>
+    <p>Liste des formateurs :</p>
+    <!-- Le track est devenu obligatoire et permet de ne pas regénéré tous les éléments si un seul est modifié -->
+    @for(trainer of trainers; let i = $index; track i){
+        <p>{{trainer}}</p>
+    }
+    @empty {
+        <!-- Si le tableau est vide -->
+        <p>Il n'y a pas encore de formateur dans la liste</p>
+    }
+
+    <h5>Affichage conditionnel big</h5>
+    <h6>Avec ngSwitch</h6>
+    <div [ngSwitch]="today.getDay()">
+        <div *ngSwitchCase="0">Frites Compotes</div>
+        <div *ngSwitchCase="1">Raviolis</div>
+        <div *ngSwitchCase="2">Burgers</div>
+        <div *ngSwitchCase="4">Brocoli</div>
+
+        <div *ngSwitchDefault>Mange ta main et garde l'autre pour demain</div>
+    </div> 
+
+    <h6>Avec le &commat;switch</h6>
+    @switch (today.getDay()) {
+        @case (0){
+            <div>Frites Compotes</div>
+        }
+        @case (4) {
+            <div>Brocolis</div>
+        }
+        @default {
+            <div>Mange ta main et garde l'autre pour demain</div>
+        }
+    }    
+</div>
+
+<div>
+    <h4>Custom directives</h4>
+    <p>On peut aussi faire ses propres directives</p>
+    <p>Dans mon jardin, on trouve des <span sound="/audios/dog.wav">chiens</span>, des <span sound="/audios/cat.wav" >chats</span> et des  <span sound="/audios/ducks.wav">canards</span></p>
+</div>
+
+<hr>

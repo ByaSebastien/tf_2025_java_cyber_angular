@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: darkseagreen;
+}
+
+main {
+    width: 80%;
+    margin: auto;
+    background-color: whitesmoke;
+    padding: 1rem 2rem;
+}
+
+h1 {
+    color : darkseagreen;
+}
+
+h2 {
+    margin: 0.5rem 0 1rem 0;
+    text-decoration: underline;
+    text-decoration-color: darkseagreen;
+    text-decoration-thickness: 0.25rem;
+    text-underline-offset: 0.5rem;
+}
+
+h3 {
+    color : darkseagreen;
+    margin: 0.5rem 0;
+}
+
+h4, h5 {
+    margin: 0.5rem 0;
+
+}
+
+hr {
+    color : darkseagreen;
+    margin: 1rem 0;
+}
+
+.btn {
+    display: block;
+    background-color: darkseagreen;
+    color : whitesmoke;
+    padding: 0.5rem 1rem;
+    border: 1px solid darkseagreen;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin: 0.5rem 0;
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+        background-color: whitesmoke;
+        color : darkseagreen;
+    }
+
+    &:disabled {
+        background-color: lightgray;
+        border-color: lightgray;
+        cursor: inherit;
+        color : whitesmoke;
+    }
+}
+
+.flex-row {
+    display: flex;
+    align-items: center;
+    gap : 1rem;
+}
+
+.text-green {
+    color : darkseagreen;
+}

@@ -1,0 +1,25 @@
+<h3>Exo 2 : Liste de courses</h3>
+
+<!--Inputs lié au propriétées declarée dans le ts-->
+<input (keydown.enter)="addCourse()" [(ngModel)]="productName" type="text">
+<input (keydown.enter)="addCourse()" [(ngModel)]="productQuantity" type="number">
+
+<!--Button lié a la methode addCourse déclarée dans le ts (sert a ajouter a notre liste 'courses')-->
+<button (click)="addCourse()">Ajouter</button>
+
+<!--Affichage dynamique du contenus de la liste courses declarée dans le ts-->
+<ul>
+  @for (item of courses; track item; let odd = $odd) {
+    <li [ngClass]="{'green': odd,'red': !odd}">
+      <p>{{ item.name }}</p>
+      <p>{{ item.quantity > 1 ? item.quantity : '' }} X</p>
+      <div class="buttons">
+        <button (click)="decreaseQuantity(item)">➖</button>
+        <button (click)="increaseQuantity(item)">➕</button>
+        <button (click)="deleteProduct(item)">❌</button>
+      </div>
+    </li>
+  }
+</ul>
+
+<hr>

@@ -1,0 +1,44 @@
+<h3>Demo 2 - Pipes</h3>
+<p>Fonctionnalité propre à Angular, qui permet un formatage de donnée dans le html</p>
+
+<div>
+    <h4>Les pipes natifs</h4>
+
+    <h5>Sur les <span class="text-green">chaines</span> </h5>
+    <p> Majuscule : {{ welcome | uppercase }} </p>
+    <p> Minuscle : {{ welcome | lowercase }} </p>
+    <p> KikooMsn : {{ welcome | titlecase }} </p>
+
+    <h5>Sur les <span class="text-green">nombres</span></h5>
+    <p> Sans pipe : {{ pi }}</p>
+    <p> Avec pipe number (sans paramètre) : {{ pi | number }} </p>
+    <!-- Les paramètres du pipe number s'écrivent comme ceci : X.Y-Z où
+     X : nombre de caractères entier minimum
+     Y : nombre minimum de chiffre après la virgule
+     Z : nombre maximum de chiffre après la virgule -->
+    <p> Avec pipe number (avec paramètre) : {{ pi | number : '1.0-2' }} </p>
+    <p> Pipe symbole monnaie : {{ price | number : '1.2-2' | currency : 'EUR' }}</p>
+    
+    <h5>Sur les <span class="text-green">dates</span></h5>
+    <p>Sans pipe : {{ today }}</p>
+    <p>Avec pipe : {{ today | date }}</p>
+    <p>Avec pipe (avec param) : {{ today | date : 'dd/MM/yyyy' }}</p>
+    <p>Avec pipe (avec param) : {{ today | date : 'dd MMMM yyyy'}}</p>
+    <p>Avec pipe (avec param) : {{ today | date : 'short'}}</p>
+
+    <br>
+    <p>Pipe <span class="text-green">json</span> pour afficher un objet, utile pour débugger parfois {{person | json }}</p>
+
+    <br>
+    <p>Vous pouvez combiner les pipes tant qu'ils renvoient le bon type</p>
+    <p> date → pipe format date → pipe majuscule : {{ today | date : 'dd MMMM yyyy' | uppercase }}</p>
+</div>
+
+<div>
+    <h4>Les custom pipes</h4>
+    <p>Nous pouvons aussi créer nos propres pipes pour formater des données. Exemple avec un pipe qui transforme une temperature (number) en la conversion de celle ci dans une autre unité grâce à un paramètre : </p>
+    <p> {{temperature}} °C vaut {{ temperature | temperature }} </p>
+    <p>{{temperature}} °F vaut {{ temperatureF | temperature : 'f-c' | lowercase }} </p>
+</div>
+
+<hr>

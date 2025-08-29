@@ -1,0 +1,23 @@
+.green {
+  background-color: darkseagreen;
+}
+
+.red {
+  background-color: indianred;
+  color: white;
+}
+
+li {
+  display: flex;
+  gap: 2em;
+  padding: 0.5em;
+
+  p {
+    width: 10%;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 1em;
+  }
+}
