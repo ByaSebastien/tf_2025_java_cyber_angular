@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+  gap: 1em;
+  padding-bottom: 1em;
+  a {
+    background-color: darkcyan;
+    padding: 0.5em;
+    border-radius: 10%;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  a:hover {
+    transform: scale(1.10);
+  }
+}
