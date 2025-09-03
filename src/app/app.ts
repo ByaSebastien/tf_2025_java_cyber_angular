@@ -12,5 +12,5 @@ import {Nav} from './nav/nav';
   styleUrl: './app.scss'
 })
 export class App {
-  protected readonly title = signal('demo');
+  protected readonly title = signal('Yabadabadoo');
 }
