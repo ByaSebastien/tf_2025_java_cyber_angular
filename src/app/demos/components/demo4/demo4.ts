@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {Demo4Enfant} from '../demo4-enfant/demo4-enfant';
+import {Demo4Enfant} from './demo4-enfant/demo4-enfant';
 
 @Component({
   selector: 'app-demo4',

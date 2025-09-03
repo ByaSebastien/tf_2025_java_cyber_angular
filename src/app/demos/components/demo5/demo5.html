@@ -1,0 +1,9 @@
+<h2>Demo Service</h2>
+@for (f of formateurs; track f.id){
+  <div class="card" [routerLink]="'/demo5/' + f.id">
+    <h3>{{ f.lastname + ' ' + f.firstname }}</h3>
+    @if (f.pictureUrl) {
+      <img [src]="f.pictureUrl" [alt]="'Avatar de ' + f.firstname">
+    }
+  </div>
+}

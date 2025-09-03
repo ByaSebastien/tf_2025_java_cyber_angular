@@ -1,0 +1,4 @@
+<h2>Exo Shopping list</h2>
+<input type="text" [(ngModel)]="productName">
+<button (click)="addProduct()">Ajouter</button>
+<app-exo3-enfant (deleteEvent)="deleteProduct($event)" [items]="products"></app-exo3-enfant>

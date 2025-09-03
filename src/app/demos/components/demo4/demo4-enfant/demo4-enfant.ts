@@ -22,19 +22,19 @@ export class Demo4Enfant {
   confirm: OutputEmitterRef<boolean> = output<boolean>();
   tw: ModelSignal<string> = model.required<string>();
 
+  // Ancienne methode
+
   // @Input({required:true})
-
   // product!: string;
-
 
   // @Output()
   // confirm: EventEmitter<boolean> = new EventEmitter();
 
+  // Pour le two way il suffit de nomer l'output avec [nomDeLinput]Change
   // @Input()
   // tw!: string;
   // @Output()
   // twChange = new EventEmitter<string>();
-
 
   confirmDelete(isOk: boolean) {
     this.confirm.emit(isOk);

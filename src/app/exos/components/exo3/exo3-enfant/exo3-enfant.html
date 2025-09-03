@@ -1,0 +1,8 @@
+<ul>
+  @for (item of items(); track item) {
+    <li>
+      <p>{{ item }}</p>
+      <button (click)="deleteEvent.emit($index)">❌</button>
+    </li>
+  }
+</ul>
