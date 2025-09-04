@@ -1,0 +1,29 @@
+<div class="buttons">
+  <button (click)="previous()">⬅️</button>
+  <button (click)="next()">➡️</button>
+</div>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Image</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (card of yuGiOhResult.data; track card.id) {
+<!--  @for (card of (yuGiOhResult$ | async)?.data; track card.id) {-->
+<!--    @for(card of yuGiOhResultSignal()?.data; track card.id) {-->
+      <tr class="card-item">
+        <td>{{card.name}}</td>
+        <td>{{card.humanReadableCardType}}</td>
+        <td><img [src]="card.card_images[0].image_url_small" [alt]="card.desc" /></td>
+      </tr>
+    }
+    <tr></tr>
+  </tbody>
+</table>
+<div class="buttons">
+  <button (click)="previous()">⬅️</button>
+  <button (click)="next()">➡️</button>
+</div>
