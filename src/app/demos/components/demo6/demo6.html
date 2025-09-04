@@ -1,6 +1,6 @@
 <div class="buttons">
-  <button (click)="previous()">⬅️</button>
-  <button (click)="next()">➡️</button>
+  <button [disabled]="!yuGiOhResult.meta.previous_page" (click)="previous()">⬅️</button>
+  <button [disabled]="!yuGiOhResult.meta.next_page" (click)="next()">➡️</button>
 </div>
 <table>
   <thead>
@@ -24,6 +24,6 @@
   </tbody>
 </table>
 <div class="buttons">
-  <button (click)="previous()">⬅️</button>
-  <button (click)="next()">➡️</button>
+  <button [disabled]="!yuGiOhResult.meta.previous_page" (click)="previous()">⬅️</button>
+  <button [disabled]="!yuGiOhResult.meta.next_page" (click)="next()">➡️</button>
 </div>
