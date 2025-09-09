@@ -1,6 +1,6 @@
 import {Component, inject} from '@angular/core';
-import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
-import {KeyValuePipe, NgClass} from '@angular/common';
+import {FormBuilder, ReactiveFormsModule, Validators} from '@angular/forms';
+import {KeyValue, KeyValuePipe, NgClass} from '@angular/common';
 import {PersonGender} from './models/person';
 
 @Component({
@@ -44,5 +44,9 @@ export class Demo7 {
       return;
     }
     console.log("Valid");
+  }
+
+  originalOrder = (a: KeyValue<string,PersonGender>, b: KeyValue<string,PersonGender>): number => {
+    return 0;
   }
 }

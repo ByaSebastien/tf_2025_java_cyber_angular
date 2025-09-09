@@ -1,14 +1,10 @@
-import {Component, inject, Signal} from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {YuGiOhService} from './services/yu-gi-oh.service';
 import {YuGiOhResult} from './models/yu-gi-oh-card';
-import {Observable} from 'rxjs';
-import {AsyncPipe} from '@angular/common';
-import {toSignal} from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'app-demo6',
   imports: [
-    AsyncPipe
   ],
   templateUrl: './demo6.html',
   styleUrl: './demo6.scss'

@@ -24,5 +24,6 @@ export class Nav {
     { title: 'Timer' , url: '/exo1'},
     { title: 'Courses' , url: '/exo2'},
     { title: 'Shopping' , url: '/exo3'},
+    { title: 'Contact form' , url: '/exo4'},
   ];
 }
