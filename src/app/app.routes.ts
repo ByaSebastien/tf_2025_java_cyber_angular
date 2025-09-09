@@ -35,6 +35,10 @@ export const routes: Routes = [
     loadComponent: () => import('./demos/components/demo6/demo6').then(m => m.Demo6),
   },
   {
+    path: 'demo7',
+    loadComponent: () => import('./demos/components/demo7/demo7').then(m => m.Demo7),
+  },
+  {
     path: 'exo1',
     loadComponent: () => import('./exos/components/exo1/exo1').then(m => m.Exo1),
   },

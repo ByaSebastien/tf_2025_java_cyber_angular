@@ -20,6 +20,7 @@ export class Nav {
     { title: 'Input/Output' , url: '/demo4'},
     { title: 'Service' , url: '/demo5'},
     { title: 'HttpClient' , url: '/demo6'},
+    { title: 'Formulaire' , url: '/demo7'},
     { title: 'Timer' , url: '/exo1'},
     { title: 'Courses' , url: '/exo2'},
     { title: 'Shopping' , url: '/exo3'},

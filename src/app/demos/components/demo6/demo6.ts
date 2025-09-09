@@ -44,7 +44,7 @@ export class Demo6 {
 
     this._yuGiOhService.getCards(url).subscribe(
       result => {
-        this.yuGiOhResult = result
+        this.yuGiOhResult = result;
       }
     );
 
